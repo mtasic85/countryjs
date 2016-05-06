@@ -15,7 +15,7 @@ var _ = require('lodash')
 
 module.exports = function () {
   var totalList = []
-  var fileList = [
+  var filenameList = [
     'afghanistan.json',
     'albania.json',
     'algeria.json',
@@ -268,7 +268,8 @@ module.exports = function () {
     'zambia.json',
     'zimbabwe.json'
   ]
-  _.forEach(fileList, function (file) {
+  _.forEach(filenameList, function (filename) {
+    var file = require(filename)
     file.ISO[2] = file.ISO.alpha2
     file.ISO[3] = file.ISO.alpha3
     totalList.push(file)
