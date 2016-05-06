@@ -269,7 +269,7 @@ module.exports = function () {
     'zimbabwe.json'
   ]
   _.forEach(filenameList, function (filename) {
-    var file = require(__dirname + '/' + filename)
+    var file = require('./' + filename)
     file.ISO[2] = file.ISO.alpha2
     file.ISO[3] = file.ISO.alpha3
     totalList.push(file)
